@@ -1,20 +1,32 @@
-
-import './assets/css/HomePage.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Home from './components/homepage/Home';
-import SigninPage from './components/Signin_Signup/signin';
-import SignupPage from './components/Signin_Signup/signup';
-
+import SignIn from "./components/Account/Sign-in/SignIn";
+import Home from "./components/Home/Home"
+import { render } from "react-dom";
+import React from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/' component={Home} exact />
-        <Route path='/signin' component={SigninPage} exact />
-        <Route path='/signup' component={SignupPage} exact />
-      </Switch>
-    </Router>
+
+    <BrowserRouter>
+      {/* <React.Fragment> */}
+      <Routes>
+        <Route path="/signin" element={<SignIn />}>
+        </Route>
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Home />}>
+        </Route>
+      </Routes>
+      {/* </React.Fragment> */}
+    </BrowserRouter>
+
+
   );
+
+
 }
 
 export default App;

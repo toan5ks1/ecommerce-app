@@ -1,0 +1,16 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  margin: auto 0;
+}
+.signIn__logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signIn__btn{
+  /* padding: 100px; */
+}
